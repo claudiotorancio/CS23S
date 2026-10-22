@@ -1,0 +1,26 @@
+.seccion-uno {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+    h2 {
+        font-size: 3rem;
+        color: $color-texto-ppal;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
+
+.seccion-dos {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+}

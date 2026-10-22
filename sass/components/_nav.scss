@@ -1,0 +1,50 @@
+@mixin nav-base {
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        color: $link-color;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        a {
+            color: $link-color;
+            display: block;
+            padding: 10px;
+        }
+
+        &:hover {
+            background-color: lighten($btn-color-primary, 20%);
+        }
+    }
+
+    &.nav-row {
+        ul {
+            @media (max-width: 480px) {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+        }
+
+        // menu-mobile
+        &.open {
+            ul {
+                @media (max-width: 480px) {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    background-color: $btn-color-primary;
+                    width: 40%;
+                    display: flex;
+                }
+            }
+        }
+    }
+
+
+}
