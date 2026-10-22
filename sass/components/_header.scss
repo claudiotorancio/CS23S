@@ -11,6 +11,7 @@
 
     @media (max-width: 480px) {
         padding: 0 15px;
+
     }
 
     h1 {
@@ -24,8 +25,10 @@
     @include header-base;
 
     .main-nav {
+
         @include nav-base;
         @include btn(#000);
+
     }
 
 

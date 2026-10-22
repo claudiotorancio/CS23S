@@ -8,7 +8,6 @@
         padding: 0;
         margin: 0;
 
-
     }
 
     li {
@@ -26,10 +25,17 @@
     &.nav-row {
         ul {
             @media (max-width: 480px) {
-                display: none;
+                visibility: hidden;
+                position: absolute;
+                display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                width: 100%;
+                top: 100%;
+                right: 0;
+                border-radius: 0 0 0 10px;
+                background: $btn-color-primary;
+                width: 40%;
+                transform-origin: top;
+                transform: scaleY(0);
             }
         }
 
@@ -37,19 +43,11 @@
         &.open {
             ul {
                 @media (max-width: 480px) {
-                    position: absolute;
-                    top: 100%;
-                    right: 0;
-                    border-radius: 0 0 0 10px;
-                    background: $btn-color-primary;
-                    width: 40%;
-                    display: flex;
-                    transition: ease 0.5s;
+                    visibility: visible;
+                    transition: ease 0.3s;
                     transform: scaleY(100%);
                 }
             }
         }
     }
-
-
 }
