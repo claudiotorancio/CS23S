@@ -1,8 +1,5 @@
-@import 'nav';
-@import 'buttons';
 
 @mixin header-base {
-    position: relative;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -10,29 +7,21 @@
     padding: 15px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    @media (max-width: 480px) {
-        padding: 0 15px;
-    }
 }
 
 .main-header {
-
     @include header-base;
 
-    .main-nav {
-        @include nav-base;
-        @include btn(#000);
-
+    &-title {
+        font-size: 1.8rem;
     }
 
+    //Header fijo en modo mobile
     @media (max-width: 480px) {
         position: sticky;
         top: 0;
         z-index: 1;
+        padding: 0 15px;
     }
 
 }

@@ -1,45 +1,49 @@
-@mixin btn ($color-texto) {
+@mixin btn-base {
     font-size: 1rem;
     font-weight: bold;
     border: none;
     border-radius: $btn-radius;
     cursor: pointer;
     transition: $btn-transition;
+}
+
+.btn {
+    @include btn-base;
 
     //Boton primario
     &-primary {
+        @include btn-base;
         background-color: $btn-color-primary;
         color: $color-texto;
 
         &:hover {
-            background-color: lighten($btn-color-primary, 20%);
+            background-color: scale-color($btn-color-primary, $lightness: 20%);
         }
     }
 
     // Botón Secundario
     &-secondary {
+        @include btn-base;
         background-color: $btn-color-secondary;
         color: $color-texto;
         border: 1px solid rgba($btn-color-text, 0.1);
 
         &:hover {
-            background-color: lighten($btn-color-secondary, 20%);
+            background: scale-color($btn-color-primary, $lightness: 20%);
             border-color: $btn-color-text;
         }
     }
 
+    //Boton mobile
     &-mobile {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 2rem;
-        
-            @media (max-width: 480px) {
-                display: block;
-            }
-    }
-}
+        @include btn-base;
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
 
-.btn {
-    @include btn(#000);
+        @media (max-width: 480px) {
+            display: block;
+        }
+    }
 }

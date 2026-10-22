@@ -1,5 +1,4 @@
 @mixin nav-base {
-
     ul {
         display: flex;
         flex-direction: row;
@@ -18,12 +17,19 @@
         }
 
         &:hover {
-            background-color: lighten($btn-color-primary, 20%);
+            background: $btn-color-primary;
         }
     }
+}
 
-    &.nav-row {
+.header-nav {
+    @include nav-base;
+
+    &.nav-mobile {
+
         ul {
+
+            //Fdormato del menu desplegable
             @media (max-width: 480px) {
                 visibility: hidden;
                 position: absolute;
@@ -36,16 +42,16 @@
                 width: 40%;
                 transform-origin: top;
                 transform: scaleY(0);
+                transition: transform 0.3s ease, visibility 0.3s ease;
             }
         }
 
-        // menu-mobile
+        // mostrar menu-mobile
         &.open {
             ul {
                 @media (max-width: 480px) {
                     visibility: visible;
-                    transition: ease 0.3s;
-                    transform: scaleY(100%);
+                    transform: scaleX(1);
                 }
             }
         }

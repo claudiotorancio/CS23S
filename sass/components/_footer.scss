@@ -8,14 +8,14 @@
 .main-footer {
     @include footer-base;
 
-    .enlace-red-social {
+    &-enlaces {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
     }
 
-    .img-red-social {
+    &-img {
         width: 25px;
         height: 25px;
         padding: 10px;

@@ -1,15 +1,26 @@
-.seccion-uno {
+@mixin seccion {
     background-color: #ffffff;
     padding: 24px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
 
-    h2 {
+.seccion-uno {
+    @include seccion;
+
+    &-title {
         font-size: 3rem;
         color: $color-texto-ppal;
+
+        @media (max-width: 480px) {
+
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+
+        }
     }
 
-    form {
+    &-form {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -18,9 +29,5 @@
 }
 
 .seccion-dos {
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-
+    @include seccion;
 }

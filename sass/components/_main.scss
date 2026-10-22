@@ -1,18 +1,6 @@
 @mixin main-base {
-    background-color: white;
-    color: black;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-family: sans-serif;
-
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-    }
 }
 
 .main-container {
