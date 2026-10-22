@@ -1,4 +1,5 @@
 @import 'nav';
+@import 'buttons';
 
 @mixin header-base {
     position: relative;
@@ -6,10 +7,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 
     @media (max-width: 480px) {
-           padding: 0 15px;;
-        }
+        padding: 0 15px;
+    }
 
     h1 {
         font-size: 1.8rem;
@@ -18,25 +20,15 @@
 }
 
 .main-header {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-    position: relative;
 
     @include header-base;
 
     .main-nav {
         @include nav-base;
+        @include btn(#000);
     }
 
-    .btn-menu-mobile {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 2rem;
 
-        @media (max-width: 480px) {
-            display: block;
-        }
-    }
 
 
 }

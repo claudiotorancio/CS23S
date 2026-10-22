@@ -19,54 +19,103 @@ img {
   height: auto;
   display: block; }
 
-.main-header {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px; }
-  @media (max-width: 480px) {
-    .main-header {
-      padding: 0 15px; } }
-  .main-header h1 {
-    font-size: 1.8rem; }
-  .main-header .main-nav ul {
-    display: flex;
-    flex-direction: row;
-    color: #0f1b1e;
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .main-header .main-nav li a {
-    color: #0f1b1e;
-    display: block;
-    padding: 10px; }
-  .main-header .main-nav li:hover {
-    background-color: #61fff6; }
-  @media (max-width: 480px) {
-    .main-header .main-nav.nav-row ul {
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%; } }
-  @media (max-width: 480px) {
-    .main-header .main-nav.nav-row.open ul {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: #00faec;
-      width: 40%;
-      display: flex; } }
-  .main-header .btn-menu-mobile {
+.btn {
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; }
+  .btn-primary {
+    background-color: #00faec;
+    color: #000; }
+    .btn-primary:hover {
+      background-color: #61fff6; }
+  .btn-secondary {
+    background-color: #202024;
+    color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1); }
+    .btn-secondary:hover {
+      background-color: #50505a;
+      border-color: #ffffff; }
+  .btn-mobile {
     display: none;
     background: none;
     border: none;
     font-size: 2rem; }
     @media (max-width: 480px) {
-      .main-header .btn-menu-mobile {
+      .btn-mobile {
         display: block; } }
+
+.main-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); }
+  @media (max-width: 480px) {
+    .main-header {
+      padding: 0 15px; } }
+  .main-header h1 {
+    font-size: 1.8rem; }
+  .main-header .main-nav {
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+    .main-header .main-nav ul {
+      display: flex;
+      flex-direction: row;
+      color: #0f1b1e;
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+    .main-header .main-nav li a {
+      color: #0f1b1e;
+      display: block;
+      padding: 10px; }
+    .main-header .main-nav li:hover {
+      background-color: #61fff6; }
+    @media (max-width: 480px) {
+      .main-header .main-nav.nav-row ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%; } }
+    @media (max-width: 480px) {
+      .main-header .main-nav.nav-row.open ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border-radius: 0 0 0 10px;
+        background: #00faec;
+        width: 40%;
+        display: flex;
+        transition: ease 0.5s;
+        transform: scaleY(100%); } }
+    .main-header .main-nav-primary {
+      background-color: #00faec;
+      color: #000; }
+      .main-header .main-nav-primary:hover {
+        background-color: #61fff6; }
+    .main-header .main-nav-secondary {
+      background-color: #202024;
+      color: #000;
+      border: 1px solid rgba(255, 255, 255, 0.1); }
+      .main-header .main-nav-secondary:hover {
+        background-color: #50505a;
+        border-color: #ffffff; }
+    .main-header .main-nav-mobile {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem; }
+      @media (max-width: 480px) {
+        .main-header .main-nav-mobile {
+          display: block; } }
 
 .btn {
   font-size: 1rem;
@@ -87,6 +136,14 @@ img {
     .btn-secondary:hover {
       background-color: #50505a;
       border-color: #ffffff; }
+  .btn-mobile {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem; }
+    @media (max-width: 480px) {
+      .btn-mobile {
+        display: block; } }
 
 .mb-1 {
   margin-bottom: 0.5rem; }
@@ -223,7 +280,7 @@ img {
 
 .grid-tres-tarjetas {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px; }
   @media (max-width: 480px) {
     .grid-tres-tarjetas {

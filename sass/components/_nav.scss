@@ -1,5 +1,7 @@
 @mixin nav-base {
 
+
+
     ul {
         display: flex;
         flex-direction: row;
@@ -7,6 +9,8 @@
         list-style: none;
         padding: 0;
         margin: 0;
+
+
     }
 
     li {
@@ -38,9 +42,12 @@
                     position: absolute;
                     top: 100%;
                     right: 0;
-                    background-color: $btn-color-primary;
+                    border-radius: 0 0 0 10px;
+                    background: $btn-color-primary;
                     width: 40%;
                     display: flex;
+                    transition: ease 0.5s;
+                    transform: scaleY(100%);
                 }
             }
         }

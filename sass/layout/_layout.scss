@@ -50,11 +50,11 @@
 //Grid par adistribuir la seccion-dos
 .grid-tres-tarjetas {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 
     @media (max-width: 480px) {
-        grid-template-columns: 1fr; //llevo 
+        grid-template-columns: 1fr; //en una sola columna 
         gap: 15px;
     }
 }
