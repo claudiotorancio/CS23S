@@ -36,7 +36,6 @@
                 width: 40%;
                 transform-origin: top;
                 transform: scaleY(0);
-                transition: ease 0.3s;
             }
         }
 
@@ -45,6 +44,7 @@
             ul {
                 @media (max-width: 480px) {
                     visibility: visible;
+                    transition: ease 0.3s;
                     transform: scaleY(100%);
                 }
             }

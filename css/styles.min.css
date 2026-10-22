@@ -91,11 +91,11 @@ img {
         background: #00faec;
         width: 40%;
         transform-origin: top;
-        transform: scaleY(0);
-        transition: ease 0.3s; } }
+        transform: scaleY(0); } }
     @media (max-width: 480px) {
       .main-header .main-nav.nav-row.open ul {
         visibility: visible;
+        transition: ease 0.3s;
         transform: scaleY(100%); } }
     .main-header .main-nav-primary {
       background-color: #00faec;
