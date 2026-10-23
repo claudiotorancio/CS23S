@@ -253,7 +253,9 @@ img {
 .main-container {
   display: flex;
   flex-direction: column; }
-  .main-container .seccion-uno {
+  .main-container-seccion-uno {
+    display: flex;
+    flex-direction: column;
     flex: 3; }
   .main-container .seccion-dos {
     flex: 1; }
