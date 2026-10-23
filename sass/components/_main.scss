@@ -1,20 +1,20 @@
-@mixin main-base {
-    //Distribucion de las secciones
-    display: flex;
-    flex-direction: column;
+// @mixin main-base {
+//     //Distribucion de las secciones
+//     display: flex;
+//     flex-direction: column;
 
-}
 
-.main-container {
-    @include main-base;
+// }
 
-    &-seccion-uno {
-        @include main-base;
-        flex: 3;
-    }
+// .main-container {
+//     @include main-base;
 
-    .seccion-dos {
-        flex: 1
-    }
+//     &-seccion-uno {
+//         flex: 3;
+//     }
 
-}
+//     .seccion-dos {
+//         flex: 1
+//     }
+
+// }
