@@ -60,12 +60,12 @@ img {
     background: #00faec;
     width: 40%;
     transform-origin: top;
-    transform: scaleY(0);
-    transition: transform 0.3s ease, visibility 0.3s ease; } }
+    transform: scaleY(0); } }
 @media (max-width: 480px) {
   .header-nav.nav-mobile.open ul {
     visibility: visible;
-    transform: scaleX(1); } }
+    transform: scaleX(1);
+    transition: transform 0.3s ease, visibility 0.3s ease; } }
 
 .btn {
   font-size: 1rem;

@@ -42,7 +42,6 @@
                 width: 40%;
                 transform-origin: top;
                 transform: scaleY(0);
-                transition: transform 0.3s ease, visibility 0.3s ease;
             }
         }
 
@@ -52,6 +51,7 @@
                 @media (max-width: 480px) {
                     visibility: visible;
                     transform: scaleX(1);
+                    transition: transform 0.3s ease, visibility 0.3s ease;
                 }
             }
         }
