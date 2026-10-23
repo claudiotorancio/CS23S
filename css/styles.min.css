@@ -230,12 +230,7 @@ img {
   grid-area: footer; }
 
 .main-container {
-  grid-area: main;
-  display: flex; }
-  .main-container .seccion-uno {
-    flex: 3; }
-  .main-container .seccion-dos {
-    flex: 1; }
+  grid-area: main; }
 
 .grid-dos-cols {
   display: grid;
@@ -258,6 +253,10 @@ img {
 .main-container {
   display: flex;
   flex-direction: column; }
+  .main-container .seccion-uno {
+    flex: 3; }
+  .main-container .seccion-dos {
+    flex: 1; }
 
 .seccion-uno {
   background-color: #ffffff;

@@ -1,6 +1,15 @@
 @mixin main-base {
-    display: flex;
-    flex-direction: column;
+    //Distribucion de las secciones
+        display: flex;
+        flex-direction: column;
+    
+        .seccion-uno {
+            flex: 3;
+        }
+    
+        .seccion-dos {
+            flex: 1
+        }
 }
 
 .main-container {

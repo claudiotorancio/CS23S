@@ -5,7 +5,6 @@ const menuMobile = document.getElementById('menu-mobile');
 //manejo del evento click
 document.addEventListener('click', (e) => {
     if (e.target === btnMovile) {
-
         return menuMobile.classList.toggle('open')
     }
 

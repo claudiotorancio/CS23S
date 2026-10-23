@@ -22,17 +22,6 @@
 .main-container {
     grid-area: main;
 
-    //Distribucion de las secciones
-    display: flex;
-
-    .seccion-uno {
-        flex: 3;
-
-    }
-
-    .seccion-dos {
-        flex: 1
-    }
 }
 
 //grid para distribuir la seccion-uno
